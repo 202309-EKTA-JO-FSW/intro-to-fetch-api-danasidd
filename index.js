@@ -15,17 +15,19 @@ const fetchUserData = async () => {
             Company: user.company.name,
         }
     })
-    console.log(modifiedUserData);
+    console.log(modifiedUserData, "Modified User Data");
 
     const filteredUserData = modifiedUserData.filter((user) => {
         return user.email.endsWith('.biz')
     })
-    console.log(filteredUserData);
+    console.log(filteredUserData, "Filtered User Data");
 
     const sortedUserData = filteredUserData.sort((a, b) => a.firstname.localeCompare(b.firstname))
-    console.log(sortedUserData);
-    
+    console.log(sortedUserData, "Sorted User Dats");
+
 } catch (error) {
     console.error('Error:', error);
 }
 }
+
+fetchUserData();
